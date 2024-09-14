@@ -8,7 +8,10 @@ import { setupCounter } from './counter.ts'
 //import './temas-ts/04-desestructurcion-obj-arre.ts'
 //import './temas-ts/05-desestructuracion-funciones.ts'
 //import './temas-ts/06-Import-export.ts'
-import './temas-ts/07-clases.ts'
+//import './temas-ts/07-clases.ts'
+//import './temas-ts/08-herencia.ts'
+//import './temas-ts/distanciaEntre2Puntos.ts'
+import './temas-ts/identificarTriangulo.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

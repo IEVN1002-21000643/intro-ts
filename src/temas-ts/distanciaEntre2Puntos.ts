@@ -11,8 +11,8 @@ export class d2p{
         this.d2y=d2y;
     }
 
-    distancia():number{
-        this.dist = Math.sqrt(((this.d2x-this.d1x)**2)+((this.d2y-this.d1y)**2))
+    distancia(x1:number, y1:number, x2:number, y2:number):number{
+        this.dist = Math.sqrt(((x2-x1)**2)+((y2-y1)**2))
         //console.log(`La distancia entre (${this.d1x},${this.d1y}) y (${this.d2x},${this.d2y}) es igual a ${this.dist}`)
         return this.dist
     }

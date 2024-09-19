@@ -9,17 +9,19 @@ class Triangulo extends d2p{
         this.d3y=d3y
     }
     obtenerLado(){
-        const ladoA = new d2p(this.d1x, this.d1y, this.d2x, this.d2y).distancia();
-        const ladoB = new d2p(this.d2x, this.d2y, this.d3x, this.d3y).distancia();
-        const ladoC = new d2p(this.d3x, this.d3y, this.d1x, this.d1y).distancia();
-        console.log(`Lado A: ${ladoA}; Lado B: ${ladoB}; Lado C: ${ladoC}`)
+        const ladoA = this.distancia(this.d1x, this.d1y, this.d2x, this.d2y);
+        const ladoB = this.distancia(this.d2x, this.d2y, this.d3x, this.d3y);
+        const ladoC = this.distancia(this.d3x, this.d3y, this.d1x, this.d1y);
+        console.log(`Lado AB: ${ladoA}; Lado BC: ${ladoB}; Lado CA: ${ladoC}`)
         if((ladoA+ladoB)>ladoC && (ladoB+ladoC)>ladoA && (ladoC+ladoA)>ladoB){
-            console.log(`los puntos: (${this.d1x}, ${this.d1y}), (${this.d2x}, ${this.d2y}), (${this.d3x}, ${this.d3y}): forman un triángulo`);
+            console.log(`Los puntos: (${this.d1x}, ${this.d1y}), (${this.d2x}, ${this.d2y}), (${this.d3x}, ${this.d3y}): forman un triángulo`);
         }else{
-            console.log(`No es posible construirlo`)
+            console.log(`No es posible construirlo con los puntos: (${this.d1x}, ${this.d1y}), (${this.d2x}, ${this.d2y}), (${this.d3x}, ${this.d3y})`)
         }
     }
 }
 
 const isTriangulo = new Triangulo(0,0,4,0,4,3);
+
+
 isTriangulo.obtenerLado();
